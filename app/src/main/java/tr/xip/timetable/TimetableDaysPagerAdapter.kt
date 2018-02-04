@@ -3,11 +3,11 @@ package tr.xip.timetable
 import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager
 import android.support.v4.app.FragmentStatePagerAdapter
-import tr.xip.timetable.model.Class
+import tr.xip.timetable.model.TimetableClass
 
-class DaysPagerAdapter(val timetable: ArrayList<Class>, fm: FragmentManager) : FragmentStatePagerAdapter(fm) {
+class TimetableDaysPagerAdapter(val timetable: ArrayList<TimetableClass>, fm: FragmentManager) : FragmentStatePagerAdapter(fm) {
 
-    override fun getItem(position: Int): Fragment = DayFragment.new(position + 1, timetable)
+    override fun getItem(position: Int): Fragment = TimetableDayFragment.new(position + 1, timetable)
 
     override fun getCount(): Int = 5
 

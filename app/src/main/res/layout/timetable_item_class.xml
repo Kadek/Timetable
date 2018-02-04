@@ -15,7 +15,7 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/startTime"
+            android:id="@+id/timetable_start_time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
@@ -34,7 +34,7 @@
             android:background="@android:color/white" />
 
         <TextView
-            android:id="@+id/endTime"
+            android:id="@+id/timetable_end_time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|center_horizontal"
@@ -53,7 +53,7 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/name"
+            android:id="@+id/timetable_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ellipsize="end"
@@ -63,7 +63,7 @@
             tools:text="Name" />
 
         <TextView
-            android:id="@+id/prof"
+            android:id="@+id/timetable_prof"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ellipsize="end"
@@ -71,7 +71,7 @@
             tools:text="Prof" />
 
         <TextView
-            android:id="@+id/place"
+            android:id="@+id/timetable_place"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:alpha="0.7"

@@ -6,13 +6,13 @@ import android.support.v7.widget.LinearLayoutManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import kotlinx.android.synthetic.main.fragment_day.*
-import tr.xip.timetable.model.Class
+import kotlinx.android.synthetic.main.timetable_fragment_day.*
+import tr.xip.timetable.model.TimetableClass
 
-class DayFragment : Fragment() {
+class TimetableDayFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.fragment_day, container, false)
+        return inflater.inflate(R.layout.timetable_fragment_day, container, false)
     }
 
     @Suppress("UNCHECKED_CAST")
@@ -22,16 +22,16 @@ class DayFragment : Fragment() {
 
         if (day == null || timetable == null) return
 
-        recycler.layoutManager = LinearLayoutManager(context)
-        recycler.adapter = ClassesAdapter(day, timetable as List<Class>)
+        timetable_recycler.layoutManager = LinearLayoutManager(context)
+        timetable_recycler.adapter = TimetableClassesAdapter(day, timetable as List<TimetableClass>)
     }
 
     companion object {
         val ARG_DAY = "day"
         val ARG_TIMETABLE = "timetable"
 
-        fun new(day: Int, timetable: ArrayList<Class>): DayFragment {
-            val fragment = DayFragment()
+        fun new(day: Int, timetable: ArrayList<TimetableClass>): TimetableDayFragment {
+            val fragment = TimetableDayFragment()
             val arguments = Bundle()
             arguments.putInt(ARG_DAY, day)
             arguments.putSerializable(ARG_TIMETABLE, timetable)

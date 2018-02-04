@@ -5,7 +5,7 @@ import java.io.Serializable
 /**
  * A class period in a day
  */
-class Class : Serializable {
+class TimetableClass : Serializable {
     val id: Int? = null
     val name: String? = null
     val prof: String? = null
